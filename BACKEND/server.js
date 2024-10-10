@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.get("/", (req, res) => {
-    res.send("<html><body><h1>App is running</h1><p>Made by @Likhilesh</p></body></html>");
+    res.send("<html><body><h1>App is running...</h1><p>Made by @Likhilesh</p></body></html>");
 });
 
 app.use(morgan("dev"));
