@@ -5,7 +5,7 @@ export const axiosInstance = axios.create({
     timeout: 35000,
     withCredentials: true,
     headers: {
-        "Access-Control-Allow-Credentials": true,
+        // "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin": "*",
     },
 });
