@@ -14,7 +14,7 @@ import { validateIsAdmin } from "./middlewares/validateIsAdmin.js";
 const port = process.env.PORT || 5000;
 const app = express();
 
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: "https://backend-abes-ticket-management-system.onrender.com", credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
