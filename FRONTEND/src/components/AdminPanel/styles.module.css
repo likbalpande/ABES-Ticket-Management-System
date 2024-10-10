@@ -1,0 +1,93 @@
+.userPanelContainer {
+    padding: 8px 24px 24px;
+}
+
+.horizontalRule {
+    margin: 24px -24px;
+}
+
+.historyCardContainer {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.historyCard {
+    width: fit-content;
+    padding: 8px 16px;
+    background-color: aliceblue;
+    border: 1px solid rgb(204, 228, 250);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 24px;
+
+    label {
+        max-width: 150px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+.createdOn {
+    padding: 4px;
+    background-color: rgba(227, 215, 250, 0.484);
+    border-radius: 4px;
+    margin: auto;
+    width: fit-content;
+    font-size: 10px;
+}
+
+.requestStatus {
+    padding: 4px;
+    border: 4px;
+    margin: auto;
+    width: fit-content;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: capitalize;
+
+    &.pending {
+        background-color: rgba(255, 255, 0, 0.7);
+    }
+
+    &.accepted {
+        background-color: rgba(85, 255, 0, 0.7);
+    }
+
+    &.rejected {
+        background-color: rgba(255, 25, 0, 0.7);
+    }
+}
+
+.cardActionButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 4px 0;
+
+    span {
+        cursor: pointer;
+        transition: all 600ms ease-in-out;
+        scale: 1.2;
+        padding: 0 2px;
+
+        &:hover {
+            scale: 1.5;
+            &:active {
+                scale: 0.7;
+            }
+        }
+
+        &.disabled {
+            background-color: lightgrey;
+            cursor: not-allowed;
+        }
+    }
+}
