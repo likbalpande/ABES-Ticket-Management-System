@@ -17,7 +17,9 @@ export const addJwtTokenToResponseCookie = (res, { email, username, rollNumber, 
     const jwtToken = createJWT({ email, username, rollNumber, phoneNumber });
     res.cookie("authorization", `Bearer ${jwtToken}`, {
         expires: new Date(Date.now() + process.env.COOKIE_EXPIRES_IN_DAYS * 24 * 60 * 60 * 1000),
-        sameSite: "lax",
+        // sameSite: "lax",
+        sameSite: "None",
+        secure: true,
         httpOnly: true,
     });
 };
