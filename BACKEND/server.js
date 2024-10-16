@@ -16,7 +16,7 @@ const app = express();
 
 app.use(
     cors({
-        origin: "https://abes-ticket-management-system-git-main-likbalpandes-projects.vercel.app",
+        origin: "https://abes-ticket-management-system.vercel.app",
         credentials: true,
     })
 );
@@ -30,7 +30,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.get("/", (req, res) => {
-    res.send("<html><body><h1>App is running...</h1><p>Made by @Likhilesh</p></body></html>");
+    res.send("<html><body><h1>App is running...v1.5</h1><p>Made by @Likhilesh</p></body></html>");
 });
 
 app.use(morgan("dev"));
