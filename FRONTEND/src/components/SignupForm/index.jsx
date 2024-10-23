@@ -3,12 +3,12 @@ import styles from "./styles.module.css";
 import useSignup from "../../hooks/useSignup.js";
 
 const SignupForm = () => {
-    const [username, setUsername] = useState("1234");
-    const [rollNumber, setRollNumber] = useState("1234");
-    const [phoneNumber, setPhoneNumber] = useState("1234");
-    const [password, setPassword] = useState("1234");
-    const [confirmPassword, setConfirmPassword] = useState("1234");
-    const [otp, setOtp] = useState("1234");
+    const [username, setUsername] = useState("");
+    const [rollNumber, setRollNumber] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+    const [otp, setOtp] = useState("");
 
     const {
         email,
@@ -55,7 +55,7 @@ const SignupForm = () => {
                     />
                 </div>
                 <div className={styles.inputGroup}>
-                    <label htmlFor="rollNumber">Roll Number:</label>
+                    <label htmlFor="rollNumber">Roll Number / Academic Id Number (Optional):</label>
                     <input
                         type="text"
                         id="rollNumber"

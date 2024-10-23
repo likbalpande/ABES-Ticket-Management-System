@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
     const { isUserLoggedIn, userLogout, user = {} } = useAppContext();
-    const { isAdmin = false, username = "guest" } = user;
+    const { isAdmin = false, username = "Guest" } = user;
     return (
         <nav className={styles.navbar}>
             <ul>

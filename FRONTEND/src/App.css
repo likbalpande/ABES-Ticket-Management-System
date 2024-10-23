@@ -8,3 +8,8 @@ h2 {
     width: fit-content;
     margin: 20px auto;
 }
+
+body {
+    background: rgb(249, 171, 64);
+    background: linear-gradient(90deg, rgba(249, 171, 64, 1) 0%, rgba(196, 186, 52, 1) 35%, rgba(0, 221, 255, 1) 100%);
+}

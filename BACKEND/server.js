@@ -16,7 +16,7 @@ const app = express();
 
 app.use(
     cors({
-        origin: "https://abes-ticket-management-system-git-main-likbalpandes-projects.vercel.app",
+        origin: "https://abes-ticket-management-system-likbalpandes-projects.vercel.app",
         credentials: true,
     })
 );

@@ -8,7 +8,7 @@ const useSignup = () => {
     const [otpLoading, setOtpLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState(null);
     const [isOTPGenerated, setIsOTPGenerated] = useState(false);
-    const [email, setEmail] = useState("abc@xyz.com");
+    const [email, setEmail] = useState("");
 
     const navigate = useNavigate();
 
