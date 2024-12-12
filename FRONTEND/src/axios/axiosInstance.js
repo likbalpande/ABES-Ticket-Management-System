@@ -9,3 +9,13 @@ export const axiosInstance = axios.create({
         "Access-Control-Allow-Origin": "*",
     },
 });
+
+axiosInstance.interceptors.request.use(
+    function (req) {
+        req.headers.authorization = "Bearer " + localStorage.getItem("user-token");
+        return req;
+    },
+    function (err) {
+        return err;
+    }
+);

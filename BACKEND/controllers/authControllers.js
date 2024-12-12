@@ -57,7 +57,7 @@ export const login = async (req, res) => {
             return;
         }
 
-        addJwtTokenToResponseCookie(res, {
+        const jwtToken = addJwtTokenToResponseCookie(res, {
             email,
             username: existingUser.username,
             rollNumber: existingUser.rollNumber,
@@ -71,6 +71,7 @@ export const login = async (req, res) => {
                 email: existingUser.email,
                 username: existingUser.username,
                 isAdmin: existingUser.isAdmin,
+                token: jwtToken,
             },
         });
     } catch (err) {

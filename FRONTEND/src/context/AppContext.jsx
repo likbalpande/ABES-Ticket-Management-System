@@ -10,20 +10,23 @@ export const AppContextProvider = ({ children }) => {
 
     const { isUserLoggedIn, ...user } = loggedInUser;
 
-    const userLogin = ({ username, email, isAdmin }) => {
+    const userLogin = ({ username, email, token, isAdmin }) => {
         const data = {
             username,
             email,
             isAdmin,
+            token,
             isUserLoggedIn: true,
         };
         setLoggedInUser(data);
         localStorage.setItem("auth-user", JSON.stringify(data));
+        localStorage.setItem("user-token", token);
     };
 
     const userLogout = () => {
         setLoggedInUser({});
         localStorage.removeItem("auth-user");
+        localStorage.removeItem("user-token");
     };
 
     const value = {

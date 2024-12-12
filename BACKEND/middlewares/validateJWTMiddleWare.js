@@ -3,7 +3,8 @@ import { handleError } from "../utils/errorHandling.js";
 
 export const validateJWTToken = (req, res, next) => {
     try {
-        const { authorization = "" } = req.cookies;
+        // const { authorization = "" } = req.cookies;
+        const { authorization = "" } = req.headers;
         const [, jwtToken] = authorization.split(" ");
 
         if (!jwtToken) {

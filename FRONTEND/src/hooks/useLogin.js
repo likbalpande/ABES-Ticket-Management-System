@@ -23,6 +23,7 @@ const useLogin = () => {
                 username: response.data.user.username,
                 email: response.data.user.email,
                 isAdmin: response.data.user.isAdmin,
+                token: response.data.user.token,
             });
         } catch (err) {
             setErrorMessage(handleAPIError(err));
